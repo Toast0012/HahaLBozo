@@ -6,6 +6,10 @@ body {
   font-family: "Josefin Sans";
 }
 
+#audio {
+  display: none;
+}
+
 .title {
   font-size: 30px;
   text-align: center;
