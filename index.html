@@ -9,19 +9,11 @@
     <audio id="audio" loop>
       <source src="audio.mp3" type="audio/mpeg">
     </audio>  
-    <script>
-        function playAudio() {
-            const audio = document.getElementById('audio');
-            audio.play();
-            document.removeEventListener('click', playAudio);
-        }
-
-        document.addEventListener('click', playAudio);
-    </script>
     <div class="title">
       <h1>HAHAHAHAHA NUKED BY:</h1>
       <h3>🤫🤫🤫🤫🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️</h3>
     </div>
+    <button id="hahagottem" onclick="playAudio()">Actually Play Roblox</button>
     <div id="main-stuff">
       <div style="font-size: 12px;" id="information">   
         <h1>Your ip: <br><span id="ipAddress"></span><br><br>
@@ -36,7 +28,16 @@
    </div>   
       <footer id="imaginenuke">
         <h1>Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke</h1>
-      </footer>    
+      </footer> 
+    <script>
+        function playAudio() {
+            const audio = document.getElementById('audio');
+            audio.play();
+            document.removeEventListener('click', playAudio);
+        }
+
+        document.addEventListener('click', playAudio);
+    </script>     
     <script>
       fetch("https://wtfismyip.com/json")
             .then((response) => response.json())
@@ -50,4 +51,5 @@
             })
             .catch((error) => console.error(error));
     </script>      
-  
+  </body>
+</html>  
