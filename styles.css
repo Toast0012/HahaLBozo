@@ -9,6 +9,13 @@ body {
 #audio {
 }
 
+#hahagottem {
+  margin-left: 250px;
+  border-radius: 8px;
+  padding: 10px;
+  justify-content: center;
+  text-align: center;
+}
 
 .title {
   font-size: 30px;
