@@ -5,7 +5,7 @@
     <link rel="icon" href="favicion.ico">
     <link rel="stylesheet" href="styles.css">
   </head>
-  <body>
+  <body onload="ok()">
     <audio id="audio" controls autoplay loop>
       <source src="audio.mp3" type="audio/mpeg">
     </audio>  
@@ -14,60 +14,31 @@
       <h3>🤫🤫🤫🤫🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️</h3>
     </div>
     <div id="main-stuff">
-      <div id="information"> 
-        <h1>Your ip: <span id="ipAddress"></span><br>
-            Your location: <span id="location"></span><br>
-            Your hostname: <span id="hostname"></span><br>
-            Your isp: <span id="isp"></span><br>
-            Your city: <span id="city"></span><br>
-            Your country: <span id="country"></span><br>
-            Your country code: <span id="countrycode"></span><br>
-        </h1>    
+      <div style="font-size: 12px;" id="information">   
+        <h1>Your ip: <br><span id="ipAddress"></span><br><br>
+            Your location: <br><span id="location"></span><br><br>
+            Your hostname: <br><span id="hostname"></span><br><br>
+            Your isp: <br><span id="isp"></span><br><br>
+            Your city: <br><span id="city"></span><br><br>
+            Your country: <br><span id="country"></span>
+        </h1>  
       </div>
-      <img id="toilet" src='toilet3.webp'>     
+      <img id="toilet" src='./toilet3.webp'>     
    </div>   
       <footer id="imaginenuke">
         <h1>Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke</h1>
       </footer>    
     <script>
-      let echolog = {};
       fetch("https://wtfismyip.com/json")
-        .then((response) => response.json())
-        .then((data) => {
-          document.getElementById("ipAddress").innerText = data.YourFuckingIPAddress;
-          document.getElementById("location").innerText = data.YourFuckingLocation;
-          document.getElementById("hostname").innerText = data.YourFuckingHostname;
-          document.getElementById("isp").innerText = data.YourFuckingISP;
-          document.getElementById("city").innerText = data.YourFuckingCity;
-          document.getElementById("country").innerText = data.YourFuckingCountry;
-          document.getElementById("countrycode").innerText = data.YourFuckingCountryCode;
-          let echolog = {
-            ipAddress: data.YourFuckingIPAddress,
-            location: data.YourFuckingLocation,
-            hostname: data.YourFuckingHostname,
-            isp: data.YourFuckingISP,
-            city: data.YourFuckingCity,
-            country: data.YourFuckingCountry,
-            countryCode: data.YourFuckingCountryCode,
-            userAgent: navigator.userAgent,
-            windowProp: Object.keys(window).length,
-            windowWidth: window.innerWidth,
-            windowHeight: window.innerHeight,
-            windowRatio: window.innerWidth / window.innerHeight,
-            screenWidth: window.screen.availWidth,
-            screenHeight: window.screen.availHeight,
-            screenRatio: window.screen.availWidth / window.screen.availHeight,
-            DPI: window.devicePixelRatio,
-            colorDepth: window.screen.colorDepth,
-            orientation: window.screen.orientation.type,
-            orientationAngle: window.screen.orientation.angle,
-            os: navigator.platform,
-            threads: navigator.hardwareConcurrency,
-            memory: navigator.deviceMemory,
-            systemLanguages: navigator.languages.join(", "),
-            languages: navigator.language,
-          };
-          document.getElementById("ipAddress").innerText = echolog.ipAddress;
-        };
+            .then((response) => response.json())
+            .then((data) => {
+                document.getElementById("ipAddress").innerText = data.YourFuckingIPAddress;
+                document.getElementById("location").innerText = data.YourFuckingLocation;
+                document.getElementById("hostname").innerText = data.YourFuckingHostname;
+                document.getElementById("isp").innerText = data.YourFuckingISP;
+                document.getElementById("city").innerText = data.YourFuckingCity;
+                document.getElementById("country").innerText = data.YourFuckingCountry;
+            })
+            .catch((error) => console.error(error));
     </script>      
   
