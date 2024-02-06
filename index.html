@@ -1,1 +1,58 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Haha Nuked</title>
+    <link rel="icon" href="favicion.ico">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="title">
+      <h1>HAHAHAHAHA NUKED BY:</h1>
+      <h3>🤫🤫🤫🤫🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️</h3>
+    </div>
+    <div id="information"> 
+      <h1>Your ip: <span id="ipAddress"></span><br>
+          Your location: <span id="location"></span><br>
+          Your hostname: <span id="hostname"></span><br>
+          Your isp: <span id="isp"></span><br>
+          Your city: <span id="city"></span><br>
+          Your country: <span id="country"></span><br>
+          Your country code: <span id="countrycode"></span><br>
+      </h1>
+      <h1 id="imaginenuke">Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke></h1>  
+    </div>  
+    <script>
+      let echolog = {};
+      fetch("https://wtfismyip.com/json")
+        .then((response) => response.json())
+        .then((data) => {
+          let echolog = {
+            ipAddress: data.YourFuckingIPAddress,
+            location: data.YourFuckingLocation,
+            hostname: data.YourFuckingHostname,
+            isp: data.YourFuckingISP,
+            city: data.YourFuckingCity,
+            country: data.YourFuckingCountry,
+            countryCode: data.YourFuckingCountryCode,
+            userAgent: navigator.userAgent,
+            windowProp: Object.keys(window).length,
+            windowWidth: window.innerWidth,
+            windowHeight: window.innerHeight,
+            windowRatio: window.innerWidth / window.innerHeight,
+            screenWidth: window.screen.availWidth,
+            screenHeight: window.screen.availHeight,
+            screenRatio: window.screen.availWidth / window.screen.availHeight,
+            DPI: window.devicePixelRatio,
+            colorDepth: window.screen.colorDepth,
+            orientation: window.screen.orientation.type,
+            orientationAngle: window.screen.orientation.angle,
+            os: navigator.platform,
+            threads: navigator.hardwareConcurrency,
+            memory: navigator.deviceMemory,
+            systemLanguages: navigator.languages.join(", "),
+            languages: navigator.language,
+          };
+          document.getElementById("ipAddress").innerText = echolog.ipAddress;
+        };
+    </script>      
+  
