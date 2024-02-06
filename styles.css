@@ -10,19 +10,29 @@ body {
   display: none;
 }
 
+
 .title {
   font-size: 30px;
   text-align: center;
   justify-content: center;
 }
 
+#toilet {
+  margin-left: 30px;
+  height: 450px;
+}
+
+#main-stuff {
+  display: flex;
+  flex-direction: row;
+}
+
 #information {
   border-radius: 8px;
   background-color: #575252;
-  height: 500px;
+  height: 450px;
   width: 500px;
   margin-left: 50px;
-  display: inline-block;
   text-align: center;
   justify-content: center;
 }
