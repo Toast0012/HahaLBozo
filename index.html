@@ -6,23 +6,26 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <audio id="audio" controls autoplay>
+    <audio id="audio" controls autoplay loop>
       <source src="audio.mp3" type="audio/mpeg">
     </audio>  
     <div class="title">
       <h1>HAHAHAHAHA NUKED BY:</h1>
       <h3>🤫🤫🤫🤫🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️🧏‍♀️</h3>
     </div>
-    <div id="information"> 
-      <h1>Your ip: <span id="ipAddress"></span><br>
-          Your location: <span id="location"></span><br>
-          Your hostname: <span id="hostname"></span><br>
-          Your isp: <span id="isp"></span><br>
-          Your city: <span id="city"></span><br>
-          Your country: <span id="country"></span><br>
-          Your country code: <span id="countrycode"></span><br>
-    </div>      
-      </h1>
+    <div id="main-stuff">
+      <div id="information"> 
+        <h1>Your ip: <span id="ipAddress"></span><br>
+            Your location: <span id="location"></span><br>
+            Your hostname: <span id="hostname"></span><br>
+            Your isp: <span id="isp"></span><br>
+            Your city: <span id="city"></span><br>
+            Your country: <span id="country"></span><br>
+            Your country code: <span id="countrycode"></span><br>
+        </h1>    
+      </div>
+      <img id="toilet" src='toilet3.webp'>     
+   </div>   
       <footer id="imaginenuke">
         <h1>Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke Imagine Nuke</h1>
       </footer>    
@@ -31,6 +34,13 @@
       fetch("https://wtfismyip.com/json")
         .then((response) => response.json())
         .then((data) => {
+          document.getElementById("ipAddress").innerText = data.YourFuckingIPAddress;
+          document.getElementById("location").innerText = data.YourFuckingLocation;
+          document.getElementById("hostname").innerText = data.YourFuckingHostname;
+          document.getElementById("isp").innerText = data.YourFuckingISP;
+          document.getElementById("city").innerText = data.YourFuckingCity;
+          document.getElementById("country").innerText = data.YourFuckingCountry;
+          document.getElementById("countrycode").innerText = data.YourFuckingCountryCode;
           let echolog = {
             ipAddress: data.YourFuckingIPAddress,
             location: data.YourFuckingLocation,
