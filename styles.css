@@ -1,2 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&display=swap');
 
-
+body {
+  background-color: #1e1e1e;
+  color: white;
+  font-family: "Josefin Sans";
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  justify-content: center;
+}
+
+#information {
+  border-radius: 8px;
+  background-color: #575252;
+  height: 500px;
+  width: 500px;
+  margin-left: 50px;
+  display: inline-block;
+  text-align: center;
+  justify-content: center;
+}
+
+#imaginenuke {
+  font-size: 15px;
+}
