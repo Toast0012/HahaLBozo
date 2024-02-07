@@ -39,17 +39,17 @@
         document.addEventListener('click', playAudio);
     </script>     
     <script>
-      fetch("https://wtfismyip.com/json")
+      fetch("https://api.my-ip.io/v2/ip.json")
             .then((response) => response.json())
             .then((data) => {
-                document.getElementById("ipAddress").innerText = data.YourFuckingIPAddress;
-                document.getElementById("location").innerText = data.YourFuckingLocation;
-                document.getElementById("hostname").innerText = data.YourFuckingHostname;
-                document.getElementById("isp").innerText = data.YourFuckingISP;
-                document.getElementById("city").innerText = data.YourFuckingCity;
-                document.getElementById("country").innerText = data.YourFuckingCountry;
+                document.getElementById("ipAddress").innerText = data.ip;
+                document.getElementById("hostname").innerText = data.asn.network;
+                document.getElementById("isp").innerText = data.location.lat;
+                document.getElementById('long').innerText = data.location.lon;
+                document.getElementById("city").innerText = data.city;
+                document.getElementById("country").innerText = data.country.name;
             })
             .catch((error) => console.error(error));
-    </script>      
+    </script>
   </body>
 </html>  
